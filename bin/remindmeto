@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+require 'remindmeto'
+
+program :version, RemindMeTo::VERSION
+program :description, 'A simple Ruby client for ubuntu notification reminders'
+
+default_command :remindmeto
+
+command :remindmeto do |c|
+  c.syntax = 'remindmeto [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.action do |args, options|
+    RemindMeTo::Runner.new(args).run
+  end
+end
