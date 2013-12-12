@@ -5,7 +5,7 @@ require 'commander/import'
 require 'remindmeto'
 
 program :version, RemindMeTo::VERSION
-program :description, 'A simple Ruby client for ubuntu notification reminders'
+program :description, 'A simple command line utility for recurring UI reminders.'
 
 default_command :remindmeto
 

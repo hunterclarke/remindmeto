@@ -1,24 +1,21 @@
 # Remindmeto
 
-TODO: Write a gem description
+A simple command line utility for recurring UI reminders.
+
+Current supported UI elements include libnotify for Ubuntu and Growl for Mac/Windows.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'remindmeto'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install remindmeto
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ remindmeto task {in/every} {time} {second(s)/minutes(s)/hour(s)}
+
+Examples:
+
+    $ remindmeto relax every 5 minutes
+    $ remindmeto turn over the laundry in an hour
 
 ## Contributing
 

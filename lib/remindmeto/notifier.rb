@@ -1,6 +1,5 @@
 require 'remindmeto/notifier/growl_notifier'
 require 'remindmeto/notifier/libnotify_notifier'
-require 'remindmeto/notifier/notification_center_notifier'
 
 module RemindMeTo
   class Notifier
