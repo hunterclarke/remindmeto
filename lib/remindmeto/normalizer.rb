@@ -22,6 +22,7 @@ module RemindMeTo
     end
 
     def get_interval(args)
+      return 1 if args.include?('second')
       return 60 if args.include?('minute')
       return 3600 if args.include?('hour')
 
