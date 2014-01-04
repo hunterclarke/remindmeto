@@ -1,7 +1,7 @@
 module RemindMeTo
   class Runner
-    def initialize(argv)
-      @options = RemindMeTo::Options.new(argv)
+    def initialize(options)
+      @options = options
       @notifier = RemindMeTo::Notifier.new
       @running = true
     end
@@ -9,9 +9,9 @@ module RemindMeTo
     # The main run loop for displaying the notifications
     def run
       while(@running)
-        sleep(@options.interval)
-        Libnotify.show(:summary => @options.message, :body => "", :timeout => 2.5)
-        @running = false unless @options.repeat
+        sleep(@options[:interval])
+        Libnotify.show(:summary => @options[:message], :body => "", :timeout => 2.5)
+        @running = false unless @options[:repeat]
       end
     end
   end

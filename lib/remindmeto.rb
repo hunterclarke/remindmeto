@@ -1,6 +1,6 @@
-require "remindmeto/version"
-require "remindmeto/os"
-require "remindmeto/normalizer"
-require "remindmeto/notifier"
-require "remindmeto/options"
-require "remindmeto/runner"
+require 'remindmeto/version'
+require 'remindmeto/os'
+require 'remindmeto/cli'
+require 'remindmeto/normalizer'
+require 'remindmeto/notifier'
+require 'remindmeto/runner'

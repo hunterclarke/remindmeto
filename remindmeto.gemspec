@@ -24,7 +24,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib]
   spec.post_install_message = post_install_message
 
-  spec.add_runtime_dependency "commander", ">= 4.1.5"
   spec.add_dependency('terminal-notifier', '~> 1.5.1') if RemindMeTo::OS.mac?
   spec.add_dependency('growl', '~> 1.0.3')             if RemindMeTo::OS.mac? || RemindMeTo::OS.windows?
   spec.add_dependency('libnotify', '~> 0.8.2')         if RemindMeTo::OS.linux?
