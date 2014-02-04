@@ -24,10 +24,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib]
   spec.post_install_message = post_install_message
 
-  spec.add_dependency('terminal-notifier', '~> 1.5.1') if RemindMeTo::OS.mac?
-  spec.add_dependency('growl', '~> 1.0.3')             if RemindMeTo::OS.mac? || RemindMeTo::OS.windows?
-  spec.add_dependency('libnotify', '~> 0.8.2')         if RemindMeTo::OS.linux?
+  spec.add_runtime_dependency('terminal-notifier', '~> 1.5') if RemindMeTo::OS.mac?
+  spec.add_runtime_dependency('growl', '~> 1.0')             if RemindMeTo::OS.mac? || RemindMeTo::OS.windows?
+  spec.add_runtime_dependency('libnotify', '~> 0.8')         if RemindMeTo::OS.linux?
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 10.1"
 end
