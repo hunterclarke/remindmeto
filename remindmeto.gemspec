@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["hunter@hunterc.com"]
   spec.description   = %q{A simple Ruby client for ubuntu notification reminders}
   spec.summary       = %q{Intuitive command-line reminders}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/hclarke3/remindmeto"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
