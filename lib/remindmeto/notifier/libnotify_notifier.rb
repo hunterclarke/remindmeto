@@ -5,11 +5,8 @@ module RemindMeTo
     class LibnotifyNotifier
       def notify(message, opts = {})
         title = 'RemindMeTo'
-        full_message = [opts[:header], opts[:message]].join(' ').lstrip
-
-        Libnotify.show :body => full_message, :summary => title
+        Libnotify.show :body => message, :summary => opts[:header]
       end
     end
-
   end
 end

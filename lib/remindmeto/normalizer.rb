@@ -4,10 +4,11 @@ module RemindMeTo
       @args = args
       @single_interval_keywords = %w{in after}
       @rolling_interval_keywords = %w{every}
-      @keyword_idx = split_by_interval_keyword()
     end
 
     def process()
+      @keyword_idx = split_by_interval_keyword
+
       options = {}
       options[:message] = get_message
       options[:interval] = get_interval

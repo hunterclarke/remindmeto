@@ -8,8 +8,8 @@ module RemindMeTo
     def run(args = ARGV)
       trap_interrupt
 
-      @options = RemindMeTo::Normalizer.new(args).process
-      RemindMeTo::Runner.new(@options).run
+      @options = Normalizer.new(args).process
+      Runner.new(@options).run
     end
 
     def trap_interrupt

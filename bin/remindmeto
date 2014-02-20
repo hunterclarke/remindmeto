@@ -1,13 +1,18 @@
 #! /usr/bin/env ruby
 # encoding: utf-8
 
-if RUBY_VERSION >= '1.9.2'
-  $LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + '/../lib')
+require 'rubygems'
+require 'bundler/setup'
+require 'remindmeto'
 
-  require 'remindmeto'
-  cli = RemindMeTo::CLI.new.run
-  exit 0
-else
-  puts 'This gem only supports Ruby 1.9.2+'
+begin
+  require 'remindmeto/cli'
+  cli = RemindMeTo::CLI.new
+  cli.run
+rescue Interrupt => e
+  puts '\nQuitting RemindMeTo...'
   exit 1
+rescue SystemExit => e
+  exit e.status
 end
+
