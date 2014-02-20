@@ -4,7 +4,7 @@ module RemindMeTo
   class Notifier
     class NotificationCenterNotifier
       def notify(message, opts = {})
-        TerminalNotifier.notify(message)
+        TerminalNotifier.notify('RemindMeTo', :title => message, :group => Process.pid)
       end
     end
   end
