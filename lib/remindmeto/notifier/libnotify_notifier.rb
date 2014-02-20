@@ -4,8 +4,7 @@ module RemindMeTo
   class Notifier
     class LibnotifyNotifier
       def notify(message, opts = {})
-        title = 'RemindMeTo'
-        Libnotify.show :body => message, :summary => opts[:header]
+        Libnotify.show(:body => 'RemindMeTo', :summary => message)
       end
     end
   end
