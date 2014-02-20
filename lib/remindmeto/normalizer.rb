@@ -36,16 +36,16 @@ module RemindMeTo
     end
 
     def get_interval
-      return 1 if @args.include?('second')
-      return 60 if @args.include?('minute')
-      return 3600 if @args.include?('hour')
+      return 1 if @args.last.eql?('second')
+      return 60 if @args.last.eql?('minute')
+      return 3600 if @args.last.eql?('hour')
 
       multiplier = @args[-2].to_i
       abort_with_usage_message if multiplier == 0
 
       interval = multiplier if @args.include?('seconds')
-      interval = 60*multiplier if @args.include?('minutes')
-      interval = 3600*multiplier if @args.include?('hours')
+      interval = 60 * multiplier if @args.include?('minutes')
+      interval = 3600 * multiplier if @args.include?('hours')
 
       interval
     end
