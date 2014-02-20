@@ -1,8 +1,8 @@
 # Remindmeto
 
-A simple command line utility for recurring UI reminders.
+A simple, intuitive reminder tool for the command line.
 
-Current supported UI elements include libnotify for Ubuntu and Growl for Mac/Windows.
+Current supported UI elements include libnotify for Ubuntu and the Notification Center for Mac.
 
 ## Installation
 
