@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.version       = RemindMeTo::VERSION
   spec.authors       = ["Hunter Clarke"]
   spec.email         = ["hunter@hunterc.com"]
-  spec.description   = %q{A simple Ruby client for ubuntu notification reminders}
+  spec.description   = %q{A simple, intuitive reminder tool for the command line}
   spec.summary       = %q{Intuitive command-line reminders}
   spec.homepage      = "https://github.com/hclarke3/remindmeto"
   spec.license       = "MIT"
@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = %w[lib]
-  spec.post_install_message = post_install_message
+  spec.post_install_message = post_install_message if RemindMeTo::OS.linux?
 
   spec.add_runtime_dependency('terminal-notifier', '~> 1.5') if RemindMeTo::OS.mac?
   spec.add_runtime_dependency('libnotify', '~> 0.8')         if RemindMeTo::OS.linux?
